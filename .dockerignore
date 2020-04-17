@@ -1,0 +1,6 @@
+.devops
+.vscode
+*.sh
+.gitignore
+.git
+output_txt_files

@@ -1,1 +1,7 @@
-<paste log output from Kubernetes-mediated prediction, here>
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+Error from server (AlreadyExists): deployments.apps "house-prediction" already exists
+NAME                                READY   STATUS    RESTARTS   AGE
+house-prediction-6d84c78488-j2ddw   1/1     Running   0          2m31s
+Forwarding from 127.0.0.1:8888 -> 80
+Forwarding from [::1]:8888 -> 80
+Handling connection for 8888
