@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/ankitjain28may/project-ml-microservice-kubernetes.svg?style=svg)](https://circleci.com/gh/ankitjain28may/project-ml-microservice-kubernetes)
 
 ## Project Overview
 
@@ -34,9 +34,17 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
+### Running the project in Docker
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+1. Setup and Configure Docker locally.
+2. Run `./run_docker.sh` file to build the image and start the container.
+3. Run `./make_prediction.sh` file to send the request to the application running in the docker container.
+4. Stop the container once you are done with the testing by running the command `docker stop <container-name>`
+
+### Running the project in Kubernetes
+
+1. Setup and Configure Kubernetes locally using Minikube.
+2. Run `./upload_docker.sh` to upload the image to DockerHub so it can be available in the Kubernetes environment.
+3. Run `./run_kubernetes.sh` file to build the deployment by fetching the image from the DockerHub. It may be possible to run it second time as image can take time in pulling and hence in starting the container so port forwarding can be failed.
+4. Run `./make_prediction.sh` file to send the request to the application running in the kubernetes environment.
+5. Stop the locally running kubernetes cluster.  

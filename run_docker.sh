@@ -17,4 +17,4 @@ docker stop $CONTAINER_NAME && docker rm $CONTAINER_NAME
 
 # Step 3: 
 # Run flask app
-# docker run --publish $PORT:80 --name $CONTAINER_NAME house-prediction:latest 
+docker run --publish $PORT:80 --name $CONTAINER_NAME house-prediction:latest 
